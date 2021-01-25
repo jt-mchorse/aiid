@@ -4,16 +4,14 @@ const createCitiationPages = (graphql, createPage) => {
   return new Promise((resolve, reject) => {
     resolve(
       graphql(
-        `query IncidentIDs {
-           allMongodbAiidprodIncidents {
-             distinct(field: incident_id)
-               nodes {
-                 incident_id
-               }
-            }
-         }
         `
-      ).then(result => {
+          query IncidentIDs {
+            allMongodbAiidprodIncidents {
+              distinct(field: incident_id)
+            }
+          }
+        `
+      ).then((result) => {
         if (result.errors) {
           console.log(result.errors); // eslint-disable-line no-console
           reject(result.errors);
@@ -32,6 +30,6 @@ const createCitiationPages = (graphql, createPage) => {
       })
     );
   });
-}
+};
 
 module.exports = createCitiationPages;
