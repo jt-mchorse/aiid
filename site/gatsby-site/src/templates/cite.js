@@ -7,13 +7,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { Layout } from '@components';
+import { Layout } from 'components';
 import { StyledHeading, StyledMainWrapper } from '../components/styles/Docs';
 import Citation from '../components/Citation';
 import IncidentList from '../components/IncidentList';
 import ImageCarousel from '../components/ImageCarousel';
 import BibTex from '../components/BibTex';
-import Link from '../components/link';
+import Link from '../components/Link';
 
 import { getCanonicalUrl } from '../utils/getCanonicalUrl';
 
